@@ -11,6 +11,11 @@ namespace First_MVC_App.Controllers
             return View(beno);
         }
 
+        public IActionResult Create() 
+        { 
+            return View();
+        }
+
         public string Hello()
         {
             return "Who's there?";
