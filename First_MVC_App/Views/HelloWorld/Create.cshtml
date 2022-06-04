@@ -1,11 +1,11 @@
-﻿@model First_MVC_App.Models.DogViewModel
+﻿@model DogViewModel
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
 
-<p class="display-2">Create</p>
+<p class="display-1">Create</p>
 
 <div class="row">
 
@@ -15,14 +15,14 @@
                 <h5>Create a new dog</h5>
             </div>
             <div class="card-body">
-                <form>
+                <form asp-controller="HelloWorld" asp-action="CreateDog" method="post"> 
                     <div class="mb-3">
                         <label class="form-label">Dog Name</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" asp-for="Name"/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Dog Age</label>
-                        <input type="number" class="form-control" />
+                        <input type="number" class="form-control" asp-for="Age" />
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">save</button>

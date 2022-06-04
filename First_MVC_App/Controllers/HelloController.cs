@@ -10,6 +10,5 @@ namespace First_MVC_App.Controllers
             DogViewModel dogModel = new DogViewModel() { Name="Sasha", Age = 12};
             return View(dogModel);
         }
-
     }
 }
