@@ -5,10 +5,11 @@ namespace First_MVC_App.Controllers
 {
     public class HelloWorldController : Controller
     {
+        private static List<DogViewModel> dogs = new List<DogViewModel>();
+
         public IActionResult Index()
         {   
-            DogViewModel beno = new DogViewModel() { Name="Beno", Age=4};
-            return View(beno);
+            return View(dogs);
         }
 
         public IActionResult Create() 
@@ -19,7 +20,9 @@ namespace First_MVC_App.Controllers
 
         public IActionResult CreateDog(DogViewModel dogViewModel)
         {
-            return View("Index");
+            //return View("Index");
+            dogs.Add(dogViewModel);
+            return RedirectToAction(nameof(Index));
         }
 
         public string Hello()

@@ -13,4 +13,8 @@
     <None Remove="Views\NovaPasta\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\HotelBooking\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
